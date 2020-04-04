@@ -1,0 +1,13 @@
+node_modules/
+lib
+dist
+.idea
+.env
+.npmrc
+package-lock.json
+yarn.lock
+
+# System Files
+.DS_Store
+Thumbs.db
+
