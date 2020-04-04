@@ -1,0 +1,14 @@
+<ng-container *ngFor="let menuItem of menu; index as i">
+  <a
+    [routerLink]="menuItem?.routerLink"
+    [routerLinkActive]="['bg-gray-100']"
+    [ngClass]="{ 'mt-1': i > 0 }"
+    class="group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-900 rounded-md focus:outline-none focus:bg-gray-200 transition ease-in-out duration-150"
+  >
+    <hero-icon
+      [icon]="menuItem?.icon || 'home'"
+      class="mr-4 h-6 w-6 text-gray-500 group-hover:text-gray-500 group-focus:text-gray-600 transition ease-in-out duration-150"
+    ></hero-icon>
+    {{ menuItem.title }}
+  </a>
+</ng-container>

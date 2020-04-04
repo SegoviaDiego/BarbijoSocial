@@ -1,0 +1,31 @@
+<div class="h-screen flex overflow-hidden bg-gray-100">
+  <!--  MOBILE SIDEBAR-->
+  <app-mobile-sidebar-layout
+    [isSidebarOpen]="isMobileSidebarOpen"
+    (onClose)="onMobileSidebarClose()"
+  ></app-mobile-sidebar-layout>
+
+  <!--  WEB SIDEBAR-->
+
+  <app-web-sidebar-layout
+    class="hidden md:flex md:flex-shrink-0"
+  ></app-web-sidebar-layout>
+
+  <div class="flex flex-col w-0 flex-1 overflow-hidden">
+    <!--  APP HEADER-->
+    <app-header-layout
+      (toggleSidebarEvent)="toggleSidebarEvent()"
+      class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow"
+    ></app-header-layout>
+
+    <!--  APP CONTENT-->
+    <app-content-layout
+      class="flex-1 relative z-0 overflow-y-auto py-6 focus:outline-none"
+      tabindex="0"
+    ></app-content-layout>
+  </div>
+</div>
+
+
+
+
