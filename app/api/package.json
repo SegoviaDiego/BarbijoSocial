@@ -1,0 +1,14 @@
+{
+  "name": "@barbijo-social/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send-mail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Segovia <segoviadiegomatias@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.0.0"
+  }
+}
