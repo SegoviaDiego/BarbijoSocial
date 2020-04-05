@@ -1,17 +1,7 @@
 {
   "name": "barbijo-social",
-  "private": true,
-  "workspaces": [
-    "app/*"
-  ],
+  "private": false,
   "scripts": {
-    "lerna": "lerna",
-    "test": "yarn run lerna run test",
-    "setup": "yarn run bootstrap && yarn run build",
-    "bootstrap": "yarn run lerna bootstrap",
-    "build": "yarn run lerna run build --sort",
-    "clean": "yarn run lerna run clean",
-    "clean:complete": "yarn run lerna clean --yes && rimraf node_modules",
     "commit": "git add . && git-cz"
   },
   "dependencies": {},
@@ -24,7 +14,6 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "git-cz": "^4.3.1",
-    "lerna": "^3.20.2",
     "prettier": "^2.0.2",
     "typescript": "^3.8.3"
   },
