@@ -4,6 +4,9 @@ import { config } from "dotenv";
 config();
 
 export default async function (req, res) {
+  console.log(process.env.SENDGRID_API_KEY);
+  console.log(process.env);
+
   if (!req || !req.body) {
     return res.status(400).send("invalid payload");
   }
