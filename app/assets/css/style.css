@@ -587,7 +587,7 @@ p {
 
 #video-area {
   position: relative;
-  background-image: url(../images/video-bg.jpg);
+  background-image: url(../images/video-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1161,6 +1161,7 @@ p {
 .faq-img img {
   max-width: 300px;
   margin-top: 10px;
+  border-radius: 10px !important;
 }
 
 /*-------------------------------------------------------------------------------------
