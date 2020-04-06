@@ -1,7 +1,7 @@
-const sgMail = require("@sendgrid/mail");
+import sgMail from "@sendgrid/mail";
+import { config } from "dotenv";
 
-const SENDGRID_API_KEY =
-  "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";
+config();
 
 export default async function (req, res) {
   if (!req || !req.body) {
@@ -14,7 +14,7 @@ export default async function (req, res) {
     return res.status(400).send("invalid payload");
   }
 
-  sgMail.setApiKey(SENDGRID_API_KEY);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const content = {
     to: "barbijosocial@gmail.com",
