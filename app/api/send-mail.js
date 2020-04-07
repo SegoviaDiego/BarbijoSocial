@@ -4,7 +4,7 @@ import { config } from "dotenv";
 config();
 
 export default async function (req, res) {
-  console.log("------");
+  console.log("------1");
   console.log(process.env.SENDGRID_API_KEY);
   console.log("------");
 
