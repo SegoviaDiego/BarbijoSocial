@@ -8,7 +8,8 @@ $(function () {
   $("#ajax-contact").on("submit", function (e) {
     // if the validator does not prevent form submit
     if (!e.isDefaultPrevented()) {
-      var url = "https://barbijosocial.org/api/send-mail";
+      // const url = "https://barbijosocial.org/api/send-mail";
+      const url = "https://barbijo-social.segoviadiego.now.sh/api/send-mail";
 
       // POST values in the background the the script URL
       $.ajax({
@@ -19,12 +20,12 @@ $(function () {
           // data = JSON object that contact.php returns
 
           // we recieve the type of the message: success x danger and apply it to the
-          var messageAlert = "alert-success";
-          var messageText =
+          const messageAlert = "alert-success";
+          const messageText =
             "El mensaje fue enviado con éxito. Nos contactaremos a la brevedad.";
 
           // let's compose Bootstrap alert box HTML
-          var alertBox =
+          const alertBox =
             '<div class="alert ' +
             messageAlert +
             ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +

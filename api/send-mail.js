@@ -4,10 +4,6 @@ import { config } from "dotenv";
 config();
 
 export default async function (req, res) {
-  console.log("------1");
-  console.log(process.env.SENDGRID_API_KEY);
-  console.log("------");
-
   if (!req || !req.body) {
     return res.status(400).send("invalid payload");
   }
@@ -21,11 +17,14 @@ export default async function (req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const content = {
-    to: "barbijosocial@gmail.com",
-    from: email,
-    subject: `${name || "Nombre sin especificar"}: ${subject}`,
+    to: ["barbijosocial@gmail.com"],
+    from: "contacto.barbijosocial@gmail.com",
+    subject: `${subject}`,
     text: message,
-    html: `<p>${message}</p>`,
+    html: `
+ ${name ? `<b>Nombre:</b> ${name} <br/>` : ""}
+ ${email ? `<b>Email:</b> ${email} <br/>` : ""}
+ <b>Contenido:</b> <p>${message}</p>`,
   };
 
   try {
