@@ -8,8 +8,7 @@ $(function () {
   $("#ajax-contact").on("submit", function (e) {
     // if the validator does not prevent form submit
     if (!e.isDefaultPrevented()) {
-      // const url = "https://barbijosocial.org/api/send-mail";
-      const url = "https://barbijo-social.segoviadiego.now.sh/api/send-mail";
+      const url = "https://barbijosocial.org/api/send-mail";
 
       // POST values in the background the the script URL
       $.ajax({
